@@ -1,0 +1,29 @@
+.main-cont {
+	border: 1px solid #d7d7d7;
+	background-color: #f9f9f9;
+	margin-top: 50px;
+}
+
+.left-cont {
+	border-right: 1px solid #d7d7d7;
+	padding-top: 15px;
+}
+
+.right-cont {
+	text-align: center;
+	margin: 40px 0;
+}
+
+.css-generate-cont {
+	margin: 20px auto;
+}
+
+.css-generate-buttons {
+	width: 400px;
+	margin:0 auto;
+}
+
+.button-default {
+	background: #ffffff;
+	border: 1px solid #eee;
+}

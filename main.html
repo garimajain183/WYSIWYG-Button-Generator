@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Button Generator</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <main role="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12 main-cont">
+            <div class="row">
+              <!-- Left section for Controls -->
+              <div class="col-md-6 col-sm-6 col-xs-12 left-cont">
+                <section>
+                  <div class="form-horizontal">
+                    <div class="form-group">
+                      <label for="inputbuttonWidth" class="col-sm-4 control-label">Width</label>
+                      <div class="col-sm-4">
+                        <input type="text" class="form-control" id="buttonWidth" placeholder="width" 
+                        onkeyup="changeButtomParam(ButtonParam.WIDTH)">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputbuttonHeight" class="col-sm-4 control-label">Height</label>
+                      <div class="col-sm-4">
+                        <input type="text" class="form-control" id="buttonHeight" placeholder="height"
+                        onkeyup="changeButtomParam(ButtonParam.HEIGHT)">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="buttonFontSize" class="col-sm-4 control-label">Font Size</label>
+                      <div class="col-sm-4">
+                        <input type="text" class="form-control" id="buttonFontSize" placeholder="Font Size"
+                        onkeyup="changeButtomParam(ButtonParam.FONTSIZE)">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="buttonFontWeight" class="col-sm-4 control-label">Font Weight</label>
+                      <div class="col-sm-4">
+                        <input type="text" class="form-control" id="buttonFontWeight" placeholder="Font Weight"
+                        onkeyup="changeButtomParam(ButtonParam.FONTWEIGHT)">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="buttonFontColor" class="col-sm-4 control-label">Font Color</label>
+                      <div class="col-sm-8">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <input type="color" value="#ff0000" class="form-control" id="buttonFontColor" 
+                            onchange="changeButtomParam(ButtonParam.FONTCOLOR)">
+                          </div>
+                          <div class="hexcolor" class="col-sm-2"></div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="buttonBackColor" class="col-sm-4 control-label">Background Color</label>
+                      <div class="col-sm-8">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <input type="color" value="#ff0000" class="form-control" id="buttonBackColor"
+                            onchange="changeButtomParam(ButtonParam.BACKCOLOR)">
+                          </div>
+                          <div class="hexcolor" class="col-sm-2"></div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="buttonTopGradient" class="col-sm-4 control-label">Top Gradient Color</label>
+                      <div class="col-sm-8">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <input type="color" value="#ff0000" class="form-control" id="buttonTopGradient" 
+                            onchange="changeButtomParam(ButtonParam.GRADIENT)">
+                          </div>
+                          <div class="hexcolor" class="col-sm-2"></div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="buttonTopGradient" class="col-sm-4 control-label">Bottom Gradient Color</label>
+                      <div class="col-sm-8">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <input type="color" value="#ff0000" class="form-control" id="buttonBottomGradient" 
+                            onchange="changeButtomParam(ButtonParam.GRADIENT)">
+                          </div>
+                          <div class="hexcolor" class="col-sm-2"></div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="buttonBorderWidth" class="col-sm-4 control-label">Border Width</label>
+                      <div class="col-sm-4">
+                        <input type="text" class="form-control" id="buttonBorderWidth" placeholder="Border Width"
+                        onkeyup="changeButtomParam(ButtonParam.BORDERWIDTH)">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="buttonBorderStyle" class="col-sm-4 control-label">Border Style</label>
+                      <div class="col-sm-4">
+                        <select class="form-control" id="buttonBorderStyle" 
+                        onchange="changeButtomParam(ButtonParam.BORDERSTYLE)">
+                          <option>solid</option>
+                          <option>dotted</option>
+                          <option>dashed</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="buttonBorderColor" class="col-sm-4 control-label">Border Color</label>
+                      <div class="col-sm-8">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <input type="color" value="#ff0000" class="form-control" id="buttonBorderColor"
+                            onchange="changeButtomParam(ButtonParam.BORDERCOLOR)">
+                          </div>
+                          <div class="hexcolor" class="col-sm-2"></div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- Right Section for Changing Button-->
+              <div class="col-md-6 col-sm-6 col-xs-12 right-cont">
+                <button class="button-default" type="submit" id="button">Button</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12 css-generate-cont">
+              <div class="css-generate-buttons">
+                <button class="btn btn-default" data-toggle="modal" data-target="#myModalCSS">Get CSS Code</button>
+                <button class="btn btn-default" onclick="saveCSS()">Save CSS Code</button>
+              </div>
+          </div>
+        </div>
+        <!-- Modal for Generated CSS -->
+        <div id="myModalCSS" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">CSS Code</h4>
+              </div>
+              <div class="modal-body" id="the-css">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+</html>
+
+
+
